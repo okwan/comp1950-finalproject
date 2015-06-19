@@ -95,9 +95,74 @@ section.nav-open {
 	visibility: hidden;
 	top: 0;
 	left: 0;
-	background-color: rgba(64,64,64,0.90);
+	background-color: rgba(64,64,64,0.95);
 	z-index: 100;
 	width: 100%;
 	height: 100%;
+	overflow: auto;
 }
 
+/* nav close button */
+button.nav-overlay-trigger-close {
+	position: fixed;
+	right: 20px;
+	top: 20px;
+	width: 80px;
+	height: 80px;
+	background: url(../resources/x-button.svg) no-repeat center center;
+	cursor: pointer;
+	border: none;
+	outline: none;
+}
+
+.nav-overlay-container {
+	position: relative;
+	width: 1200px;
+	margin: auto;
+}
+
+.nav-overlay-fixed {
+	position: fixed;
+	width: 100%;
+	top: 270px;
+	left: 0px;
+	height: 0px;
+	z-index: 0;
+}
+
+.nav-overlay-left-column {
+	position: absolute;
+	width: 50%;
+	font-family: DINProBlack;
+	font-size: 3.5em;
+	text-transform: uppercase;
+	color: white;
+}
+
+.nav-overlay-right-column {
+	width: 590px;
+	padding-top: 225px;
+	float: right;
+	position: relative;
+	z-index: 900;
+}
+
+.nav-overlay-right-column ul {
+	font-size: 2em;
+	text-transform: uppercase;
+	font-family: DINProMedium;
+	color: #5D5D5D;
+}
+
+.nav-overlay-right-column ul li {
+	padding: 25px;
+}
+
+.nav-overlay-right-column ul li a:hover {
+	transition: 0.1s ease-in	;
+	color: white;
+}
+
+.row-100 {
+	height: 100%;
+}
