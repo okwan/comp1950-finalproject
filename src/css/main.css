@@ -1,0 +1,90 @@
+/* fonts */
+@font-face {
+    font-family: DINProBold;
+    src: url('../fonts/DINPro-Bold_13934.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: DINProBlack;
+    src: url('../fonts/DINPro-Black_13933.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: DINProMedium;
+    src: url('../fonts/DINPro-Medium_13936.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: DINProLight;
+    src: url('../fonts/DINPro-Light_13935.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: DINProRegular;
+    src: url('../fonts/DINPro-Regular_13937.ttf') format('truetype');
+}
+
+/* spans */
+span.dinpro-light {
+	font-family: DINProLight;
+}
+
+span.dinpro-regular {
+	font-family: DINProRegular;
+}
+
+/* Reset Unordered List Padding */
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+
+nav {
+	position: fixed;
+	background-color: rgba(72,72,72,0.85);
+	height: 85px;
+	width: 100%;
+	color: white;
+}
+
+ul.nav-content {
+	position: relative;
+
+}
+
+nav ul.nav-content li {
+	display: inline-block;
+	float: right;
+	text-transform: uppercase;
+	padding-right: 5%;
+	font-size: 1.5em;
+	font-family: DINProMedium;
+	vertical-align: middle;
+	line-height: 85px;
+}
+
+ul.home-logo {
+	display: inline-block;
+	float: left;
+	line-height: 85px;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	padding-left: 15px;
+	font-family: DINProMedium;
+
+}
+
+/* nav overlay */
+.nav-overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(64,64,64,0.90);
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+}
+
