@@ -33,13 +33,9 @@ span.dinpro-regular {
 	font-family: DINProRegular;
 }
 
-a {
+a, a:link, a:visited, a:active {
 	color: none;
 	text-decoration: none;
-}
-
-a:visited {
-	color: none;
 }
 
 /* Reset Unordered List Padding */
@@ -85,10 +81,18 @@ ul.home-logo {
 
 }
 
+section.nav-open {
+	opacity: 1;
+	visibility: visible;
+	-webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+
 /* nav overlay */
 .nav-overlay {
-	display: none;
 	position: fixed;
+	opacity: 0;
+	visibility: hidden;
 	top: 0;
 	left: 0;
 	background-color: rgba(64,64,64,0.90);

@@ -7,6 +7,8 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 
+	<!-- JS -->
+	<script src = "../lib/js/jquery-1.11.3.min.js"></script>
 </head>
 
 
@@ -19,7 +21,7 @@
 		<ul class = "nav-content">
 			<li>quizzes</li>
 			<li>exercises</li>
-			<li><a href = "">lectures</a></li>
+			<li class = "nav-overlay-trigger"><a href = "#">lectures</a></li>
 		</ul>
 	</nav>
 
@@ -28,10 +30,16 @@
 	</main>
 
 	<!-- Full screen overlay navigation -->
-	<section class = "nav-overlay">
-		<section>asdfsdaf</section>
+	<section class = "nav-overlay nav-overlay-transition">
+		<img src = "./resources/x-button.png"></img>
+		<section class = "nav-overlay-fixed">asdfsdaf</section>
 		<section>asdfsda</section>
 	</section>
+
+
+	<!-- JS -->
+	<script src = "js/main.js"></script>
+
 </body>
 
 
