@@ -33,6 +33,15 @@ span.dinpro-regular {
 	font-family: DINProRegular;
 }
 
+a {
+	color: none;
+	text-decoration: none;
+}
+
+a:visited {
+	color: none;
+}
+
 /* Reset Unordered List Padding */
 ul {
 	padding: 0;
