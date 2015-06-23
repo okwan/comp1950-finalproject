@@ -58,7 +58,7 @@ a, a:link, a:visited, a:active {
 
 body {
 	background-color: #fbfbfb;
-	overflow: scroll;
+	overflow: auto;
 }
 /* Reset Unordered List Padding */
 ul {
@@ -224,8 +224,13 @@ span.vertical {
 	  -o-transform-origin: 50% 50%;
 	  transform-origin: 50% 50%;
 
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 
+}
+
+footer {
+	display: block;
+	padding-top: 8%;
 }
 
 span.vertical a {
@@ -234,4 +239,12 @@ span.vertical a {
 
 span.vertical a:hover {
 	color:#5D5D5D;
+}
+
+pre {
+	max-height: 450px;
+}
+
+pre[class*="language-"] {
+	overflow: auto;
 }

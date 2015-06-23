@@ -1,6 +1,7 @@
 main {
 	margin-left: 15%;
 	margin-right: 15%;
+	z-index: 100;
 }
 
 .lecture-header-text {
@@ -25,7 +26,7 @@ main {
 }
 
 .lecture-text-body p {
-	font-size: 1.5em;
+	font-size: 1.25em;
 	line-height: 115%;
 }
 
@@ -33,6 +34,6 @@ main {
 	position: fixed;
 	width: 50px;
 	height: 150px;
+	top: 20%;
 	background-color: #ef4135;
-	z-index: 2001;
 }
