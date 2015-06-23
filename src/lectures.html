@@ -4,11 +4,14 @@
 
 <head>
 
+	<title>Lecture 7 | JS Frameworks</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/lecture.css">
 
 	<link rel="stylesheet" type="text/css" href="../lib/css/prism.css">
+	<link rel="stylesheet" type="text/css" href="../lib/css/animate.css">
+
 	<link href='http://fonts.googleapis.com/css?family=Sanchez' rel='stylesheet' type='text/css'>
 
 	<!-- JS -->
@@ -21,7 +24,7 @@
 	<section class = "floating-nav">
 		<a href = "#" class = "button"></a>
 	</section>
-	<nav>
+	<nav id = "nav">
 		<ul class = "home-logo">
 			<li><a href="#"><span class="dinpro-regular">bcit</span>comp</a></li>
 		</ul>
@@ -334,6 +337,23 @@ var _ = self.Prism = {
 			<br><br>
 			JavaScript support is built right into all the major web browsers, including Internet Explorer, Firefox and Safari. Provided that the visitors to your site are using web browsers that support JavaScript (most do) and have JavaScript enabled (it is by default), then your JavaScript will run when they visit the page.</p>
 		</section>
+		<section class = "lecture-exercise-header">
+			<h3 id = "exercise-1">Exercise 1 | Run a simple script</h3>
+		</section>
+		<section class = "lecture-text-body">
+			<ol class = "number">
+				<li>Include the jQuery library codebase using the <code>&lt;script src=""&gt;&lt;script&gt;</code> tag in the <code>&lt;head&gt;</code> section of an HTML page. Load either a local copy obtained from the jQuery downloads page, or link to a copy on a Content Delivery Network (CDN).</li>
+				<li>Add an additional <script></script> tag to the<head> section of the document, and place the following code inside: <pre><code class="language-javascript"> $(document).ready(function(){
+   //your javascript code
+ });</code></pre></li>
+				<li>Alternatively, you can omit the <code>(document).ready</code> section if all the jQuery code is located at the bottom of the HTML page, just before the body tag closes</li>
+				<li>Instead of the comment <code>//your javascript code</code>, write javascript instructions, such as <code>alert("Hello World!");</code></li>
+				<li>Test the page</li>
+			</ol>
+			<section class = "exercise-buttons">
+				<button class = "flat-buttons">exercise 1</button>
+			</section>
+		</section>
 	</main>
 
 	<!-- Full screen overlay navigation -->
@@ -345,7 +365,7 @@ var _ = self.Prism = {
 			<section class = "nav-overlay-fixed">
 				<section class = "nav-overlay-container">
 					<section class = "nav-overlay-left-column">
-						lecture seven
+						<h1 class = "big-number">7</h1>
 					</section>
 				</section>
 			</section>
@@ -380,7 +400,7 @@ var _ = self.Prism = {
 			<section class = "nav-overlay-fixed">
 				<section class = "nav-overlay-container">
 					<section class = "nav-overlay-left-column">
-						exercises
+						<h1>exercises</h1>
 					</section>
 				</section>
 			</section>
@@ -388,17 +408,10 @@ var _ = self.Prism = {
 					<section class = "row-100">
 						<section class = "nav-overlay-right-column">
 							<ul>
-								<li><a href = "#">01 | TOOLS &amp; STANDARDS</a></li>
-								<li><a href = "#">02 | HTML5</a></li>
-								<li><a href = "#">03 | CSS TECHNIQUE</a></li>
-								<li><a href = "#">04 | CSS LAYOUTS</a></li>
-								<li><a href = "#">05 | RESPONSIVE CSS</a></li>
-								<li><a href = "#">06 | CSS3</a></li>
-								<li><a href = "#">07 | JS FRAMEWORKS</a></li>			
-								<li><a href = "#">08 | DYNAMIC CONTENT</a></li>
-								<li><a href = "#">09 | TEMPLATING, SEO</a></li>
-								<li><a href = "#">10 | METHODOLOGY</a></li>
-								<li><a href = "#">11 | PROJECT WORK</a></li>
+								<li><a href = "#">01 | RUN A SIMPLE SCRIPT</a></li>
+								<li><a href = "#">02 | CLICK EVENTS</a></li>
+								<li><a href = "#">03 | JQUERY EXAMPLES</a></li>
+								<li><a href = "#">04 | DOCUMENT READY</a></li>
 								<br><br><br><br><br><br>
 							</ul>
 						</section>
@@ -413,6 +426,29 @@ var _ = self.Prism = {
 	<!-- JS -->
 	<script src = "js/main.js"></script>
 	<script src = "../lib/js/prism.js"></script>
+	<script src = "../lib/js/headroom.js"></script>
+	<script>
+		(function() {
+		    var header = document.querySelector("#nav");
+		    if(window.location.hash) {
+		      header.classList.add("slide--up");
+		    }
+
+		    new Headroom(header, {
+		        tolerance: {
+		          down : 10,
+		          up : 20
+		        },
+		        offset : 205,
+		        classes: {
+		          initial: "slide",
+		          pinned: "slide--reset",
+		          unpinned: "slide--up"
+		        }
+		    }).init();
+
+		}());
+	</script>
 </body>
 
 

@@ -74,7 +74,7 @@ ul {
 nav {
 	position: fixed;
 	background-color: rgba(72,72,72,0.85);
-	height: 85px;
+	height: 65px;
 	width: 100%;
 	color: white;
 	z-index: 500;
@@ -100,13 +100,13 @@ nav ul.nav-content li {
 	font-size: 1.5em;
 	font-family: DINProMedium;
 	vertical-align: middle;
-	line-height: 85px;
+	line-height: 65px;
 }
 
 ul.home-logo {
 	display: inline-block;
 	float: left;
-	line-height: 85px;
+	line-height: 65px;
 	font-size: 1.5em;
 	text-transform: uppercase;
 	padding-left: 15px;
@@ -168,10 +168,16 @@ button.nav-overlay-trigger-close {
 .nav-overlay-left-column {
 	position: absolute;
 	width: 50%;
+}
+.nav-overlay-left-column h1 {
 	font-family: DINProBlack;
-	font-size: 3.5em;
+	font-size: 5em;
 	text-transform: uppercase;
 	color: white;
+}
+
+h1.big-number {
+	font-size: 18em;
 }
 
 .nav-overlay-right-column {
@@ -266,7 +272,6 @@ pre[class*="language-"] {
 	height: 100%;
 	overflow: auto;
 }
-}
 
 .nav-exercises {
 	position: fixed;
@@ -280,4 +285,50 @@ pre[class*="language-"] {
 	height: 100%;
 	overflow: auto;
 }
+
+ol.number {
+	list-style-type: decimal;
+	font-size: 1.25em;
+	list-style-position: inside;
+}
+
+ol.number li {
+	padding-top: 2%;
+}
+
+code {
+	color: #07a;
+	font-family: Courier,'Andale Mono',monospace;
+	font-size: 1em;
+}
+
+button {
+	cursor: pointer;
+}
+
+button.flat-buttons {
+  	display: inline-block;
+ 	margin: 0 10px 0 0;
+	padding: 10px 50px;
+	font-size: 1.5em;
+	font-family: DINProRegular;
+	line-height: 1.8;
+	appearance: none;
+	box-shadow: none;
+	border-radius: 0;
+	color: #fff;
+	background-color: #ef4135;
+	border: none;
+	text-transform: uppercase;
+	transition: 0.5s ease-in;
+	letter-spacing: 3px;
+}
+
+button.flat-buttons:hover {
+  background-color: #d85952;
+  transition: 0.5s ease-in;
+}
+
+button:focus {
+  outline: none
 }

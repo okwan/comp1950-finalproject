@@ -25,6 +25,3 @@ $($floatingButton).click(function() {
 	$navExercises.addClass('nav-open');
 	$body.css('overflow', 'hidden');
 });
-
-
-
