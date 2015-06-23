@@ -1,0 +1,38 @@
+main {
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
+.lecture-header-text {
+	position: relative;
+	padding-top: 13%;
+}
+
+.lecture-header-text-caption {
+	position: relative;
+	padding-bottom: 7%;
+}
+
+.lecture-header-text-mini-title {
+	padding-top: 3%;
+	position: relative;
+}
+
+.lecture-text-body {
+	padding-top: 1%;
+	color: #818179;
+	font-family: DINProRegular;
+}
+
+.lecture-text-body p {
+	font-size: 1.5em;
+	line-height: 115%;
+}
+
+.floating-nav {
+	position: fixed;
+	width: 50px;
+	height: 150px;
+	background-color: #ef4135;
+	z-index: 2001;
+}
