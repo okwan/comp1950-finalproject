@@ -15,12 +15,13 @@ main {
 }
 
 .lecture-header-text-mini-title {
-	padding-top: 3%;
+	padding-top: 2.5%;
 	position: relative;
 }
 
 .lecture-text-body {
 	padding-top: 1%;
+	padding-bottom: 2%;
 	color: #818179;
 	font-family: DINProRegular;
 }
@@ -32,8 +33,25 @@ main {
 
 .floating-nav {
 	position: fixed;
-	width: 50px;
-	height: 150px;
-	top: 20%;
+	bottom: 5%;
+	right: 3%;
+	z-index: 1000;
+}
+
+.button {
+	z-index: 1000;
+	border-radius: 50%;
+	box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, .3);
+	float:left;
+	height: 80px;
+	width: 80px;			
 	background-color: #ef4135;
+	background: url('../resources/exercise-floating.png') center no-repeat;
+	background-size: 120% 120%;
+	-webkit-transition: all .1s linear;
+	transition: all .1s linear;
+}
+
+.button:hover {
+	box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, .3);
 }
