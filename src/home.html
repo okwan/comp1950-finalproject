@@ -1,0 +1,207 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<title> Home </title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/lecture.css">
+	<link rel="stylesheet" type="text/css" href="../lib/css/prism.css">
+	<link rel="stylesheet" type="text/css" href="../lib/css/animate.css">
+	<link href='http://fonts.googleapis.com/css?family=Sanchez' rel='stylesheet' type='text/css'>
+	<script src = "../lib/js/jquery-1.11.3.min.js"></script>
+    <!--////////////// CSS link for rainbow coed /////////////-->
+    <link href="css/blackboard.css" rel="stylesheet" type="text/css">
+    <!--////////////// ///////////////////////// /////////////-->
+</head>
+    
+<style>
+.description {
+    width: 100%;
+    height: 70%;
+    background-image: url(img/bk3.jpg);
+    color: gainsboro;
+    box-shadow: 10px 10px 5px #888888;
+    margin-bottom: 5%;
+}
+ #bcit_comp1950 {
+ padding: 4%;
+ }
+  #home_header {
+  font-size: 44px;
+  font-family: monospace;
+  margin-bottom: 3%;
+ text-shadow: 8px 8px 5px rgba(150, 150, 150, 1);     
+      
+  }
+ .course_desc {
+ background-color: gray;
+ border-color: red;
+ color: white;
+ border-radius: 5px;
+ border-width: thick;
+ margin-top: 8%;
+ font-size: 20px;
+     padding: 1%;
+ }  
+ .textofdesc {
+  background-color: mintcream;
+  
+ color: black;
+ 
+ border-style: solid;
+ margin-top: 0%;
+ font-size: 15px;
+     padding: 4%;
+      box-shadow: 10px 10px 5px #888888;
+ }    
+    
+</style>    
+    
+<body>
+	<section class = "floating-nav">
+		<a href = "#" class = "button"></a>
+	</section>
+	<nav id = "nav">
+		<ul class = "home-logo">
+			<li><a href="#"><span class="dinpro-regular">bcit</span>comp</a></li>
+		</ul>
+		
+		<ul class = "nav-content">
+			<li><a href = "#">quizzes</a></li>
+			<li class = "nav-overlay-trigger"><a href = "#">lectures</a></li>
+		</ul>
+	</nav>
+	<main>
+       
+        
+		<section class = "lecture-header-text">
+            <div id = "home_header"> Home </div></h2>
+		</section>
+	
+        
+         <section class="description">
+           <div id="bcit_comp1950">     
+            This website is for BCIT students of the 12 week version of COMP 1950.
+
+          Check the course catalogue at BCIT to see when this course is running next.
+             </div>
+        </section>
+        
+		<section class = "course_desc">
+			Course Description
+		</section>
+       <section class = "textofdesc">
+			COMP 1950 follows on from COMP 1850 in more depth and introduces new topics and techniques for developing effective web sites.
+
+Students will gain a deeper understanding of HTML and CSS. Topics will include: Current and emerging trends in HTML, detailed use of CSS for layout and presentation, an introduction to JavaScript frameworks such as jQuery, how to leverage Server Side Includes (SSI) for re-usable code, and working with Content Management Systems.
+
+
+		</section>
+    
+    	<section class = "course_desc">
+			More Course Description
+		</section>
+       <section class = "textofdesc">
+			COMP 1950 follows on from COMP 1850 in more depth and introduces new topics and techniques for developing effective web sites.
+
+Students will gain a deeper understanding of HTML and CSS. Topics will include: Current and emerging trends in HTML, detailed use of CSS for layout and presentation, an introduction to JavaScript frameworks such as jQuery, how to leverage Server Side Includes (SSI) for re-usable code, and working with Content Management Systems.
+
+
+		</section>
+    
+     <section class = "course_desc">
+			JavaScript 
+		</section>
+       
+        <pre><code data-language="javascript">
+      /********* RainBow Source Code *************** */
+
+       $(document).ready(function() 
+           {
+         function showHiddenParagraphs() {
+         $("p.hidden").fadeIn(500);
+            }
+        setTimeout(showHiddenParagraphs, 1000);
+        });
+
+		</code></pre>
+		</section>	
+	
+	</main>
+
+
+	<section class = "nav-lectures nav-overlay nav-overlay-transition">
+		<button type ="button" class = "nav-overlay-trigger-close"></button>
+
+		<section class = "nav-content">
+			<section class = "nav-overlay-fixed">
+				<section class = "nav-overlay-container">
+					<section class = "nav-overlay-left-column">
+						<h1 class = "big-number">7</h1>
+					</section>
+				</section>
+			</section>
+				<section class = "nav-overlay-container">
+					<section class = "row-100">
+						<section class = "nav-overlay-right-column">
+							<ul>
+								<li><a href = "#">01 | TOOLS &amp; STANDARDS</a></li>
+								<li><a href = "#">02 | HTML5</a></li>
+								<li><a href = "#">03 | CSS TECHNIQUE</a></li>
+								<li><a href = "#">04 | CSS LAYOUTS</a></li>
+								<li><a href = "#">05 | RESPONSIVE CSS</a></li>
+								<li><a href = "#">06 | CSS3</a></li>
+								<li><a href = "#">07 | JS FRAMEWORKS</a></li>			
+								<li><a href = "#">08 | DYNAMIC CONTENT</a></li>
+								<li><a href = "#">09 | TEMPLATING, SEO</a></li>
+								<li><a href = "#">10 | METHODOLOGY</a></li>
+								<li><a href = "#">11 | PROJECT WORK</a></li>
+								<br><br><br><br><br><br>
+							</ul>
+						</section>
+					</section>
+				</section>
+		</section>
+	</section>
+
+
+
+	<footer>
+
+	</footer>
+	<!-- JS -->
+	<script src = "js/main.js"></script>
+<!--////////////// src for the rainbow coed /////////////-->
+    <script src = "js/rainbow.js"></script>
+     <script src = "js/generic.js"></script>
+    <script src = "js/javascript.js"></script>
+<!-- ////////////////////////////////////////////////////-->
+	<script src = "../lib/js/prism.js"></script>
+	<script src = "../lib/js/headroom.js"></script>
+	<script>
+		(function() {
+		    var header = document.querySelector("#nav");
+		    if(window.location.hash) {
+		      header.classList.add("slide--up");
+		    }
+
+		    new Headroom(header, {
+		        tolerance: {
+		          down : 10,
+		          up : 20
+		        },
+		        offset : 205,
+		        classes: {
+		          initial: "slide",
+		          pinned: "slide--reset",
+		          unpinned: "slide--up"
+		        }
+		    }).init();
+
+		}());
+	</script>
+</body>
+
+
+</html>

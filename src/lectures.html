@@ -1,25 +1,16 @@
 <!DOCTYPE HTML>
 
 <html>
-
 <head>
-
-	<title>Lecture 7 | JS Frameworks</title>
+	<title> Home </title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/lecture.css">
-
 	<link rel="stylesheet" type="text/css" href="../lib/css/prism.css">
 	<link rel="stylesheet" type="text/css" href="../lib/css/animate.css">
-
 	<link href='http://fonts.googleapis.com/css?family=Sanchez' rel='stylesheet' type='text/css'>
-
-	<!-- JS -->
 	<script src = "../lib/js/jquery-1.11.3.min.js"></script>
-
 </head>
-
-
 <body>
 	<section class = "floating-nav">
 		<a href = "#" class = "button"></a>
@@ -36,335 +27,31 @@
 	</nav>
 	<main>
 		<section class = "lecture-header-text">
-			<h1>lecture seven</h1>
+			<h1></h1>
 		</section>
 		<section class = "lecture-header-text-caption">
 			<h2>javascript frameworks</h2>
 		</section>
+        
 		<section class = "lecture-header-text-mini-title firstChildPadding">
 			<h3>What is JavaScript?</h3>
 		</section>
-		<section class = "lecture-text-body">
-			<p>JavaScript is a programming language used to make web pages interactive. It runs on your visitor's computer and doesn't require constant downloads from your website. JavaScript is often used to create polls and quizzes. No, they are two completely different computer languages. Only their names are similar. If you want to learn about Java instead, we have a whole other resource section on Java. JavaScript support is built right into all the major web browsers, including Internet Explorer, Firefox and Safari. Provided that the visitors to your site are using web browsers that support JavaScript (most do) and have JavaScript enabled (it is by default), then your JavaScript will run when they visit the page.</p>
-		</section>
+	
 		<section class = "lecture-header-text-mini-title">
 			<h3>Document Object Model (DOM)</h3>
 		</section>
-		<section class = "lecture-text-body">
-			<p>	The Document Object Model (DOM) is a programming interface for HTML, XML and SVG documents. It provides a structured representation of the document (a tree) and it defines a way that the structure can be accessed from programs so that they can change the document structure, style and content. The DOM provides a representation of the document as a structured group of nodes and objects that have properties and methods. Nodes can also have event handlers attached to them, and once that event is triggered the event handlers get executed. Essentially, it connects web pages to scripts or programming languages.
-			<br><br>
-			Though often accessed using JavaScript, the DOM itself is not a part of the JavaScript language, and it can be accessed by other languages, though this is much less common.</p>
-		</section>
+
 		<pre><code class="language-javascript">/* **********************************************
      Begin prism-core.js
 ********************************************** */
 
-self = (typeof window !== 'undefined')
-	? window   // if in browser
-	: (
-		(typeof WorkerGlobalScope !== 'undefined' && self instanceof WorkerGlobalScope)
-		? self // if in worker
-		: {}   // if in node js
-	);
 
-/**
- * Prism: Lightweight, robust, elegant syntax highlighting
- * MIT license http://www.opensource.org/licenses/mit-license.php/
- * @author Lea Verou http://lea.verou.me
- */
-
-var Prism = (function(){
-
-// Private helper vars
-var lang = /\blang(?:uage)?-(?!\*)(\w+)\b/i;
-
-var _ = self.Prism = {
-	util: {
-		encode: function (tokens) {
-			if (tokens instanceof Token) {
-				return new Token(tokens.type, _.util.encode(tokens.content), tokens.alias);
-			} else if (_.util.type(tokens) === 'Array') {
-				return tokens.map(_.util.encode);
-			} else {
-				return tokens.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/\u00a0/g, ' ');
-			}
-		},
-
-		type: function (o) {
-			return Object.prototype.toString.call(o).match(/\[object (\w+)\]/)[1];
-		},
-
-		// Deep clone a language definition (e.g. to extend it)
-		clone: function (o) {
-			var type = _.util.type(o);
-
-			switch (type) {
-				case 'Object':
-					var clone = {};
-
-					for (var key in o) {
-						if (o.hasOwnProperty(key)) {
-							clone[key] = _.util.clone(o[key]);
-						}
-					}
-
-					return clone;
-
-				case 'Array':
-					return o.map(function(v) { return _.util.clone(v); });
-			}
-
-			return o;
-		}
-	},
-
-	languages: {
-		extend: function (id, redef) {
-			var lang = _.util.clone(_.languages[id]);
-
-			for (var key in redef) {
-				lang[key] = redef[key];
-			}
-
-			return lang;
-		},
-
-		/**
-		 * Insert a token before another token in a language literal
-		 * As this needs to recreate the object (we cannot actually insert before keys in object literals),
-		 * we cannot just provide an object, we need anobject and a key.
-		 * @param inside The key (or language id) of the parent
-		 * @param before The key to insert before. If not provided, the function appends instead.
-		 * @param insert Object with the key/value pairs to insert
-		 * @param root The object that contains `inside`. If equal to Prism.languages, it can be omitted.
-		 */
-		insertBefore: function (inside, before, insert, root) {
-			root = root || _.languages;
-			var grammar = root[inside];
-			
-			if (arguments.length == 2) {
-				insert = arguments[1];
-				
-				for (var newToken in insert) {
-					if (insert.hasOwnProperty(newToken)) {
-						grammar[newToken] = insert[newToken];
-					}
-				}
-				
-				return grammar;
-			}
-			
-			var ret = {};
-
-			for (var token in grammar) {
-
-				if (grammar.hasOwnProperty(token)) {
-
-					if (token == before) {
-
-						for (var newToken in insert) {
-
-							if (insert.hasOwnProperty(newToken)) {
-								ret[newToken] = insert[newToken];
-							}
-						}
-					}
-
-					ret[token] = grammar[token];
-				}
-			}
-			
-			// Update references in other language definitions
-			_.languages.DFS(_.languages, function(key, value) {
-				if (value === root[inside] && key != inside) {
-					this[key] = ret;
-				}
-			});
-
-			return root[inside] = ret;
-		},
-
-		// Traverse a language definition with Depth First Search
-		DFS: function(o, callback, type) {
-			for (var i in o) {
-				if (o.hasOwnProperty(i)) {
-					callback.call(o, i, o[i], type || i);
-
-					if (_.util.type(o[i]) === 'Object') {
-						_.languages.DFS(o[i], callback);
-					}
-					else if (_.util.type(o[i]) === 'Array') {
-						_.languages.DFS(o[i], callback, i);
-					}
-				}
-			}
-		}
-	},
-
-	highlightAll: function(async, callback) {
-		var elements = document.querySelectorAll('code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code');
-
-		for (var i=0, element; element = elements[i++];) {
-			_.highlightElement(element, async === true, callback);
-		}
-	},
-
-	highlightElement: function(element, async, callback) {
-		// Find language
-		var language, grammar, parent = element;
-
-		while (parent && !lang.test(parent.className)) {
-			parent = parent.parentNode;
-		}
-
-		if (parent) {
-			language = (parent.className.match(lang) || [,''])[1];
-			grammar = _.languages[language];
-		}
-
-		if (!grammar) {
-			return;
-		}
-
-		// Set language on the element, if not present
-		element.className = element.className.replace(lang, '').replace(/\s+/g, ' ') + ' language-' + language;
-
-		// Set language on the parent, for styling
-		parent = element.parentNode;
-
-		if (/pre/i.test(parent.nodeName)) {
-			parent.className = parent.className.replace(lang, '').replace(/\s+/g, ' ') + ' language-' + language;
-		}
-
-		var code = element.textContent;
-
-		if(!code) {
-			return;
-		}
-
-		code = code.replace(/^(?:\r?\n|\r)/,'');
-
-		var env = {
-			element: element,
-			language: language,
-			grammar: grammar,
-			code: code
-		};
-
-		_.hooks.run('before-highlight', env);
-
-		if (async && self.Worker) {
-			var worker = new Worker(_.filename);
-
-			worker.onmessage = function(evt) {
-				env.highlightedCode = Token.stringify(JSON.parse(evt.data), language);
-
-				_.hooks.run('before-insert', env);
-
-				env.element.innerHTML = env.highlightedCode;
-
-				callback && callback.call(env.element);
-				_.hooks.run('after-highlight', env);
-			};
-
-			worker.postMessage(JSON.stringify({
-				language: env.language,
-				code: env.code
-			}));
-		}
-		else {
-			env.highlightedCode = _.highlight(env.code, env.grammar, env.language);
-
-			_.hooks.run('before-insert', env);
-
-			env.element.innerHTML = env.highlightedCode;
-
-			callback && callback.call(element);
-
-			_.hooks.run('after-highlight', env);
-		}
-	},
-
-	highlight: function (text, grammar, language) {
-		var tokens = _.tokenize(text, grammar);
-		return Token.stringify(_.util.encode(tokens), language);
-	},
-
-	tokenize: function(text, grammar, language) {
-		var Token = _.Token;
-
-		var strarr = [text];
-
-		var rest = grammar.rest;
-
-		if (rest) {
-			for (var token in rest) {
-				grammar[token] = rest[token];
-			}
-
-			delete grammar.rest;
-		}
-
-		tokenloop: for (var token in grammar) {
-			if(!grammar.hasOwnProperty(token) || !grammar[token]) {
-				continue;
-			}
-
-			var patterns = grammar[token];
-			patterns = (_.util.type(patterns) === "Array") ? patterns : [patterns];
-
-			for (var j = 0; j < patterns.length; ++j) {
-				var pattern = patterns[j],
-					inside = pattern.inside,
-					lookbehind = !!pattern.lookbehind,
-					lookbehindLength = 0,
-					alias = pattern.alias;
-
-				pattern = pattern.pattern || pattern;
-
-				for (var i=0; i<strarr.length; i++) { // Don’t cache length as it changes during the loop
-
-					var str = strarr[i];
-
-					if (strarr.length > text.length) {
 		</code></pre>
 		</section>	
 		<section class = "lecture-header-text-mini-title">
 			<h3>Javscript Basics</h3>
 		</section>
-		<section class = "lecture-text-body">
-			<p>Let's explain just some of the basic features of the JavaScript language, to give you some more understanding of how it all works. Better yet, these features are common to all programming languages. If you can understand these fundamentals, you should be able to make a start programming just about anything!
-			<br><br>
-			JavaScript support is built right into all the major web browsers, including Internet Explorer, Firefox and Safari. Provided that the visitors to your site are using web browsers that support JavaScript (most do) and have JavaScript enabled (it is by default), then your JavaScript will run when they visit the page.</p>
-		</section>
-		<section class = "lecture-exercise-header">
-			<h3 id = "exercise-1">Exercise 1 | Run a simple script</h3>
-		</section>
-		<section class = "lecture-text-body">
-			<ol class = "number">
-				<li>Include the jQuery library codebase using the <code>&lt;script src=""&gt;&lt;script&gt;</code> tag in the <code>&lt;head&gt;</code> section of an HTML page. Load either a local copy obtained from the jQuery downloads page, or link to a copy on a Content Delivery Network (CDN).</li>
-				<li>Add an additional <script></script> tag to the<head> section of the document, and place the following code inside: <pre><code class="language-javascript"> $(document).ready(function(){
-   //your javascript code
- });</code></pre></li>
-				<li>Alternatively, you can omit the <code>(document).ready</code> section if all the jQuery code is located at the bottom of the HTML page, just before the body tag closes</li>
-				<li>Instead of the comment <code>//your javascript code</code>, write javascript instructions, such as <code>alert("Hello World!");</code></li>
-				<li>Test the page</li>
-			</ol>
-			<section class = "exercise-buttons">
-				<button class = "flat-buttons">exercise 1</button>
-			</section>
-		</section>
-		<section class = "lecture-header-text-mini-title">
-			<h3>Javscript Basics Continued</h3>
-		</section>
-		<section class = "lecture-text-body">
-			<p>Although jQuery is itself written in javascript, it provides for several new features and techniques not available in 'vanilla' javascript.
-			<br><br>
-			<h4>Assigning Events</h4>
-			<p>In javascript you would assign events to trigger functions by using the event attribute, <br>eg:
-			<code>&lt;div onclick="alert('Hello World');">&lt;/div></code>
-			<br>In jQuery, events are not assigned in the HTML, but in the javascript code using a more object-oriented syntax (described below).</p>
-		</section>
+	
 	</main>
 
 	<!-- Full screen overlay navigation -->
@@ -404,32 +91,6 @@ var _ = self.Prism = {
 	</section>
 
 
-	<section class = "nav-exercises nav-overlay nav-overlay-transition">
-		<button type ="button" class = "nav-overlay-trigger-close"></button>
-
-		<section class = "nav-content">
-			<section class = "nav-overlay-fixed">
-				<section class = "nav-overlay-container">
-					<section class = "nav-overlay-left-column">
-						<h1>exercises</h1>
-					</section>
-				</section>
-			</section>
-				<section class = "nav-overlay-container">
-					<section class = "row-100">
-						<section class = "nav-overlay-right-column">
-							<ul>
-								<li><a href = "#" id = "lec7-ex-1">01 | RUN A SIMPLE SCRIPT</a></li>
-								<li><a href = "#">02 | CLICK EVENTS</a></li>
-								<li><a href = "#">03 | JQUERY EXAMPLES</a></li>
-								<li><a href = "#">04 | DOCUMENT READY</a></li>
-								<br><br><br><br><br><br>
-							</ul>
-						</section>
-					</section>
-				</section>
-		</section>
-	</section>
 
 	<footer>
 
