@@ -289,5 +289,101 @@
             <p>By attending this course, every student acknowledges that they have been made aware of these policies and the actions that will be taken if students fail to comply.</p>
         </section>
     </main>
+
+    <!-- Full screen overlay navigation -->
+    <section class = "nav-lectures nav-overlay nav-overlay-transition">
+        <button type ="button" class = "nav-overlay-trigger-close"></button>
+
+        <section class = "nav-content">
+            <section class = "nav-overlay-fixed">
+                <section class = "nav-overlay-container">
+                    <section class = "nav-overlay-left-column">
+                        <h1 class = "big-number">7</h1>
+                    </section>
+                </section>
+            </section>
+            <section class = "nav-overlay-container">
+                <section class = "row-100">
+                    <section class = "nav-overlay-right-column">
+                        <ul>
+                            <li><a href = "#">01 | TOOLS &amp; STANDARDS</a></li>
+                            <li><a href = "#">02 | HTML5</a></li>
+                            <li><a href = "#">03 | CSS TECHNIQUE</a></li>
+                            <li><a href = "#">04 | CSS LAYOUTS</a></li>
+                            <li><a href = "#">05 | RESPONSIVE CSS</a></li>
+                            <li><a href = "#">06 | CSS3</a></li>
+                            <li><a href = "#">07 | JS FRAMEWORKS</a></li>
+                            <li><a href = "#">08 | DYNAMIC CONTENT</a></li>
+                            <li><a href = "#">09 | TEMPLATING, SEO</a></li>
+                            <li><a href = "#">10 | METHODOLOGY</a></li>
+                            <li><a href = "#">11 | PROJECT WORK</a></li>
+                            <br><br><br><br><br><br>
+                        </ul>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+
+
+    <section class = "nav-exercises nav-overlay nav-overlay-transition">
+        <button type ="button" class = "nav-overlay-trigger-close"></button>
+
+        <section class = "nav-content">
+            <section class = "nav-overlay-fixed">
+                <section class = "nav-overlay-container">
+                    <section class = "nav-overlay-left-column">
+                        <h1>exercises</h1>
+                    </section>
+                </section>
+            </section>
+            <section class = "nav-overlay-container">
+                <section class = "row-100">
+                    <section class = "nav-overlay-right-column">
+                        <ul>
+                            <li><a href = "#exercise-1">01 | RUN A SIMPLE SCRIPT</a></li>
+                            <li><a href = "#">02 | CLICK EVENTS</a></li>
+                            <li><a href = "#">03 | JQUERY EXAMPLES</a></li>
+                            <li><a href = "#">04 | DOCUMENT READY</a></li>
+                            <br><br><br><br><br><br>
+                        </ul>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+
+    <footer>
+
+    </footer>
+    <!-- JS -->
+    <script src = "js/main.js"></script>
+    <script src = "../lib/js/prism.js"></script>
+    <script src = "../lib/js/headroom.js"></script>
+
+    <!-- For nav hide/show when scrolling -->
+    <script>
+        (function() {
+            var header = document.querySelector("#nav");
+            if(window.location.hash) {
+                header.classList.add("slide--up");
+            }
+
+            new Headroom(header, {
+                tolerance: {
+                    down : 10,
+                    up : 20
+                },
+                offset : 205,
+                classes: {
+                    initial: "slide",
+                    pinned: "slide--reset",
+                    unpinned: "slide--up"
+                }
+            }).init();
+
+        }());
+    </script>
+
 </body>
 </html>
