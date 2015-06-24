@@ -3,81 +3,134 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>COMP1950 | Course Information</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/lecture.css">
+
+    <link rel="stylesheet" type="text/css" href="../lib/css/prism.css">
+    <link rel="stylesheet" type="text/css" href="../lib/css/animate.css">
+
+    <link href='http://fonts.googleapis.com/css?family=Sanchez' rel='stylesheet' type='text/css'>
+
+    <!-- JS -->
+    <script src = "../lib/js/jquery-1.11.3.min.js"></script>
 </head>
+
 <body>
-    <h1>Course Information</h1>
-    <section>
-        <h3>Place & Time</h3>
-        <p>See <a href="">BCIT's COMP 1950 page</a> for the current course room and any applicable holiday schedules.
-        </p>
+    <section class = "floating-nav">
+        <a href = "#" class = "button"></a>
     </section>
-    <section>
-        <h3>Format</h3>
-        <p>Attendance is mandatory for all sessions of COMP 1950.</p>
-        <p>6:00pm - 8:30pm
-            <ul>
-                <li>Quiz</li>
-                <li>Lecture</li>
-                <li>Code walkthroughs</li>
-                <li>In class exercise</li>
-                <li>15 minute break</li>
-            </ul>
-        </p>
-        <p>8:30pm - 9:00pm
-            <ul>
-                <li>Homework assignment</li>
-                <li>Q & A</li>
-            </ul>
-        </p>
-    </section>
-    <section>
-        <h3>Evaluation</h3>
-        <table>
-            <tr>
-                <td>Description</td>
-                <td>Due</td>
-                <td>Worth</td>
-            </tr>
-            <tr>
-                <td>Homework (9 in total)</td>
-                <td>Daily</td>
-                <td>35%</td>
-            </tr>
-            <tr>
-                <td>Quizzes (8 in total)</td>
-                <td>Various</td>
-                <td>20%</td>
-            </tr>
-            <tr>
-                <td>Group Project</td>
-                <td>Session 12</td>
-                <td>20%</td>
-            </tr>
-            <tr>
-                <td>Final Exam</td>
-                <td>Session 12</td>
-                <td>25%</td>
-            </tr>
-        </table>
-    </section>
-    <section>
-        <h3>Requirements</h3>
-        <ur>
-            <li>Completion of COMP1850 or equivalent is required before beginning COMP1950</li>
-            <li>Students taking COMP1950 must have solid foundational skills with both HTML and CSS, and some
-                familiarity with Javascript.</li>
-            <li>Students are expected to understand the use of FTP and basic file management, be fluent with their
-                operating system, and be proficient with a file compression utility (.zip).</li>
-            <li>If you have a problem with code you are working on and wish to email your instructor for assistance, be
-                sure to provide the following:
-                <ul>
-                    <li>a .zip or .rar compressed file as an attachment. include in it all related files and folders
-                        (HTML, CSS, and Javascript, images, etc)</li>
-                    <li>in the body of the email describe your question(s) as specifically as possible</li>
-                </ul>
-            </li>
-        </ur>
-    </section>
+    <nav id = "nav">
+        <ul class = "home-logo">
+            <li><a href="#"><span class="dinpro-regular">bcit</span>comp</a></li>
+        </ul>
+        <ul class = "nav-content">
+            <li><a href = "#">quizzes</a></li>
+            <li class = "nav-overlay-trigger"><a href = "#">lectures</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="lecture-header-text">
+            <h1>Course Information</h1>
+        </section>
+        <section class="lecture-header-text-mini-title firstChildPadding">
+            <h3>Place & Time</h3>
+        </section>
+        <section class="lecture-text-body">
+            <p>See <a href="http://www.bcit.ca/study/courses/comp1950">BCIT's COMP 1950 page</a> for the current course room and any applicable holiday schedules.</p>
+        </section>
+        <section class="lecture-header-text-mini-title">
+            <h3>Format</h3>
+        </section>
+        <section class="lecture-text-body">
+            <p>Attendance is mandatory for all sessions of COMP 1950.</p>
+            <br>
+            <table class="lecture-table">
+                <tr class="lecture-table-header">
+                    <td>6:00pm - 8:30pm</td>
+                    <td>8:30pm - 9:00pm</td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Quiz</li>
+                            <li>Lecture</li>
+                            <li>Code walkthroughs</li>
+                            <li>In class exercise</li>
+                            <li>15 minute break</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Homework assignment</li>
+                            <li>Q & A</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section class="lecture-header-text-mini-title">
+            <h3>Evaluation</h3>
+        </section>
+        <section class="lecture-text-body">
+            <table class="lecture-table">
+                <tr class="lecture-table-header">
+                    <td>Description</td>
+                    <td>Due</td>
+                    <td>Worth</td>
+                </tr>
+                <tr>
+                    <td>Homework (9 in total)</td>
+                    <td>Daily</td>
+                    <td>35%</td>
+                </tr>
+                <tr>
+                    <td>Quizzes (8 in total)</td>
+                    <td>Various</td>
+                    <td>20%</td>
+                </tr>
+                <tr>
+                    <td>Group Project</td>
+                    <td>Session 12</td>
+                    <td>20%</td>
+                </tr>
+                <tr>
+                    <td>Final Exam</td>
+                    <td>Session 12</td>
+                    <td>25%</td>
+                </tr>
+            </table>
+        </section>
+        <section class="lecture-header-text-mini-title">
+            <h3>Requirements</h3>
+        </section>
+        <section class="lecture-text-body">
+            <ol>
+                <li>Completion of COMP1850 or equivalent is required before beginning COMP1950.</li>
+                <li>Students taking COMP1950 must have solid foundational skills with both HTML and CSS, and some familiarity with Javascript.</li>
+                <li>Students are expected to understand the use of FTP and basic file management, be fluent with their operating system, and be proficient with a file compression utility (.zip).</li>
+
+            </ol>
+                    <td></td>
+                    <td>
+                        If you have a problem with code you are working on and wish to email your instructor for assistance, be
+                        sure to provide the following:
+                        <ul>
+                            <li>a .zip or .rar compressed file as an attachment. include in it all related files and folders
+                                (HTML, CSS, and Javascript, images, etc)</li>
+                            <li>in the body of the email describe your question(s) as specifically as possible</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+
+
+
+
+
+
+
     <section>
         <h3>Course Curriculum Overview</h3>
         <ul>
@@ -203,5 +256,7 @@
         <p>By attending this course, every student acknowledges that they have been made aware of these policies and the actions that will be taken if students fail to comply.
         </p>
     </section>
+
+    </main>
 </body>
 </html>
