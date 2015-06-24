@@ -26,7 +26,7 @@ main {
 	font-family: DINProRegular;
 }
 
-.lecture-text-body p {
+.lecture-text-body p, .lecture-text-body ul li {
 	font-size: 1.25em;
 	line-height: 125%;
 }

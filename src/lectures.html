@@ -376,6 +376,38 @@ document.write("Hello " + name01 ", you are " + age01 + " years old.");
 $name02   = "Jane";
 $age02	= 29;
 document.write("Hello " + $name02 ", you are " + $age02 + " years old.");</code></pre>
+			<br><br><h4>Patterns</h4>
+			<p>You will notice this sasme pattern in many jQuery statements</p>
+			<pre><code class = "language-javascript"> $(object).event(function(){
+   //javascript code
+ });</code></pre>
+ 			<ul>
+ 				<li><span class = "orange">object:</span> any valid selector</li>
+ 				<li><span class = "orange">event:</span> see a list of jquery event</li>
+ 				<li><span class = "orange">function:</span> this creates a new 'nameless', anonymous function that will be invoked as soon as the event occurs</li>
+ 				<li><span class = "orange">javascript code:</span>  includes one or more javascript instructions, or jQuery instructions</li>
+ 			</ul>
+		</section>
+		<section class = "lecture-exercise-header">
+			<h3 id = "exercise-2">Exercise 2 | Click Events</h3>
+		</section>
+		<section class = "lecture-text-body">
+			<ol class = "number">
+				<li><pre><code class = "language-javascript">$(document).ready(function(){
+	$("div").click(function(event){
+		alert("Hello World");
+	});
+ });</code></pre></li>
+				<li>Add an additional <script></script> tag to the<head> section of the document, and place the following code inside: <pre><code class="language-javascript"> $(document).ready(function(){
+   //your javascript code
+ });</code></pre></li>
+				<li>Alternatively, you can omit the <code>(document).ready</code> section if all the jQuery code is located at the bottom of the HTML page, just before the body tag closes</li>
+				<li>Instead of the comment <code>//your javascript code</code>, write javascript instructions, such as <code>alert("Hello World!");</code></li>
+				<li>Test the page</li>
+			</ol>
+			<section class = "exercise-buttons">
+				<button class = "flat-buttons">exercise 2</button>
+			</section>
 		</section>
 	</main>
 
@@ -423,7 +455,11 @@ document.write("Hello " + $name02 ", you are " + $age02 + " years old.");</code>
 				<section class = "nav-overlay-container">
 					<section class = "nav-overlay-left-column">
 						<h1>exercises</h1>
-					</section>
+						<br><br>
+						<section class = "exercise-buttons">
+							<button class = "flat-buttons">homework 7</button>
+						</section>		
+					</section>	
 				</section>
 			</section>
 				<section class = "nav-overlay-container">
@@ -431,7 +467,7 @@ document.write("Hello " + $name02 ", you are " + $age02 + " years old.");</code>
 						<section class = "nav-overlay-right-column">
 							<ul>
 								<li><a class = "scroll-and-overlay-close" href = "#exercise-1">01 | RUN A SIMPLE SCRIPT</a></li>
-								<li><a href = "#">02 | CLICK EVENTS</a></li>
+								<li><a class = "scroll-and-overlay-close" href = "#exercise-2">02 | CLICK EVENTS</a></li>
 								<li><a href = "#">03 | JQUERY EXAMPLES</a></li>
 								<li><a href = "#">04 | DOCUMENT READY</a></li>
 								<br><br><br><br><br><br>
