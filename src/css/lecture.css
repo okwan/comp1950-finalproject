@@ -31,11 +31,6 @@ main {
 	line-height: 125%;
 }
 
-.lecture-text-body a {
-    color: darkred;
-    font-weight: bold;
-}
-
 .floating-nav {
 	position: fixed;
 	bottom: 5%;
@@ -65,17 +60,3 @@ main {
 	padding-top: 1.5%;
 }
 
-.lecture-table {
-    width: 75%;
-}
-
-.lecture-table li {
-    list-style-type: circle;
-    position: relative;
-    left: 20px;
-}
-
-.lecture-table-header {
-    font-weight: bold;
-    font-size: 18px;
-}
