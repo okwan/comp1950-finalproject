@@ -24,12 +24,13 @@
     src: url('../fonts/DINPro-Regular_13937.ttf') format('truetype');
 }
 
+/* for highlighting text colouring */
 ::-moz-selection {
-   background-color: #ef4135;
+   background-color: #DE5A51;
    color: #fff;
 }
 ::selection {
-    background-color: #ef4135;
+    background-color: #DE5A51;
     color: #fff;
 }
 

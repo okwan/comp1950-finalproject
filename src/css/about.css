@@ -14,7 +14,7 @@ th, td {
     text-align: left;
 }
 
-li {
+tr td ul li, .about-text-body li {
     padding: 5px;
 }
 

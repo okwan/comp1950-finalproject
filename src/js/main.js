@@ -27,31 +27,32 @@ $($floatingButton).click(function() {
 	$body.css('overflow', 'hidden');
 });
 
-$('a').click(function(e)
-{
-    // Special stuff to do when this link is clicked...
+$(".scroll-and-overlay-close").click(function(event){
+       event.preventDefault();
+       //calculate destination place
+       var dest=0;
+       if($(this.hash).offset().top > $(document).height()-$(window).height()){
+            dest=$(document).height()-$(window).height();
+       }else{
+            dest=$(this.hash).offset().top;
+       }
+       //go to destination
+        $navLectures.removeClass('nav-open');
+        $navExercises.removeClass('nav-open');
+        $body.css('overflow', 'auto');
+       $('html,body').animate({scrollTop:dest}, 1000,'swing');
+ });
 
-    // Cancel the default action
-    e.preventDefault();
-});
 
-$(document).ready(function(){
-  $('a[href*=#]').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-    && location.hostname == this.hostname) {
-      var $target = $(this.hash);
-      $target = $target.length && $target
-      || $('[name=' + this.hash.slice(1) +']');
-      if ($target.length) {
-              $navLectures.removeClass('nav-open');
-              $navExercises.removeClass('nav-open');
-             $body.css('overflow', 'auto');
-
-        var targetOffset = $target.offset().top;
-        $('html,body')
-        .animate({scrollTop: targetOffset}, 1000);
-       return false;
-      }
-    }
-  });
-});
+$(".scroll").click(function(event){
+       event.preventDefault();
+       //calculate destination place
+       var dest=0;
+       if($(this.hash).offset().top > $(document).height()-$(window).height()){
+            dest=$(document).height()-$(window).height();
+       }else{
+            dest=$(this.hash).offset().top;
+       }
+       //go to destination
+       $('html,body').animate({scrollTop:dest}, 1000,'swing');
+ });
