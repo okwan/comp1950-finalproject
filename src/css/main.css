@@ -24,6 +24,15 @@
     src: url('../fonts/DINPro-Regular_13937.ttf') format('truetype');
 }
 
+::-moz-selection {
+   background-color: #ef4135;
+   color: #fff;
+}
+::selection {
+    background-color: #ef4135;
+    color: #fff;
+}
+
 a {
 	color: white;
 }
@@ -44,6 +53,14 @@ h3 {
 	text-transform: uppercase;
 	font-family: DINProBold;
 	font-size: 1.5em;
+}
+
+h4 {
+	color: #ef4135;
+	text-transform: uppercase;
+	font-family: DinProRegular;
+	font-size: 1.25em;
+	padding-bottom: 1%;
 }
 
 /* spans */
@@ -133,6 +150,7 @@ section.nav-open {
 	width: 100%;
 	height: 100%;
 	overflow: auto;
+
 }
 
 /* nav close button */
@@ -285,7 +303,9 @@ pre[class*="language-"] {
 	height: 100%;
 	overflow: auto;
 }
-
+ol {
+	margin-left: 1.5%;
+}
 ol.number {
 	list-style-type: decimal;
 	font-size: 1.25em;
@@ -322,6 +342,7 @@ button.flat-buttons {
 	text-transform: uppercase;
 	transition: 0.5s ease-in;
 	letter-spacing: 3px;
+	margin-left: 1.5%;
 }
 
 button.flat-buttons:hover {

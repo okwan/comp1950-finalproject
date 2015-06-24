@@ -12,6 +12,7 @@ $navExercises = $(".nav-exercises");
 // navigation toggle add & remove
 $($navOverlayTrigger).click(function() {
 	$navLectures.addClass('nav-open');
+	$navLectures.addClass('.bounceOutUp');
 	$body.css('overflow', 'hidden');
 });
 
@@ -25,3 +26,24 @@ $($floatingButton).click(function() {
 	$navExercises.addClass('nav-open');
 	$body.css('overflow', 'hidden');
 });
+
+(function() {
+    var header = document.querySelector("#nav");
+    if(window.location.hash) {
+      header.classList.add("slide--up");
+    }
+
+    new Headroom(header, {
+        tolerance: {
+          down : 10,
+          up : 20
+        },
+        offset : 205,
+        classes: {
+          initial: "slide",
+          pinned: "slide--reset",
+          unpinned: "slide--up"
+        }
+    }).init();
+
+}());
