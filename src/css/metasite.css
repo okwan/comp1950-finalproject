@@ -1,0 +1,123 @@
+.header-bg {
+  background: url(../resources/bg-1.jpg) no-repeat center top fixed;
+  -moz-background-size: cover;
+  background-size: cover;
+  width: 100%;
+}
+
+.header-overlay {
+  background-color: rgba(0, 0, 0, 0.55);
+  width: 100%;
+  min-height: 800px;
+}
+
+.container {
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 25%;
+	padding-left: 25%;
+}
+
+.white {
+	color: white;
+}
+
+h1.raleway-h1 {
+	padding-top: 20%;
+	font-size: 3em;
+	font-family: 'Raleway', sans-serif;
+}
+
+h2 {
+	font-size: 1.5em;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 100 !important;
+	line-height: 1.5em;
+}
+
+.h3-text {
+	font-size: 1.5em;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400 !important;
+}
+
+strong {
+	font-weight: 700;
+}
+
+.btn {
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	background: transparent;
+	color: #fff;
+	border: 2px solid #fff;
+	transition: 0.3s ease;
+	padding: 13px 30px;
+	border-radius: 3px;
+	margin-right: 5%;
+}
+
+.btn-hover:hover {
+	background: white;
+	color: #ef4135;
+}
+
+.btn-dark {
+	background-color: #ef4135;
+	border: 2px solid #ef4135;
+}
+
+.align-left {
+	text-align: left;
+	margin-left: 15%;
+	padding-top: 50px;
+}
+
+.padding-fix {
+	padding-top: 5% !important;
+}
+
+.padding-fix-little {
+	padding-top: 1% !important;
+}
+
+ul.ul-flex {
+	display:-webkit-flex;
+	padding-top: 5%;
+    max-width: 100%;
+}
+
+ul.ul-flex li {
+    -webkit-flex: 1 0 0px;
+	padding: 20px;
+    overflow: hidden;
+    width: 33.333%;
+}
+
+ul.ul-flex li img {
+	display: block;
+}
+
+ul.ul-flex li p {
+	font-size: 1em;
+	line-height: 1.5em;
+	font-family: 'Raleway', sans-serif;
+	-ms-word-break: break-all;
+	word-break:break-all;
+	-webkit-hyphens: auto;
+   	-moz-hyphens: auto;
+        hyphens: auto;
+}
+
+h3 {
+	font-size: 1.5em;
+	font-family: 'Raleway', sans-serif;
+}
+
+.center-margin-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
