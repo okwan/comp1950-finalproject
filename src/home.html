@@ -16,17 +16,17 @@
 </head>
     
 <style>
-.description {
+/*.description {
     width: 100%;
     height: 70%;
-    background-image: url(img/bk3.jpg);
-    color: gainsboro;
-    box-shadow: 10px 10px 5px #888888;
+    background-color: grey;
+    color: white;
+    
     margin-bottom: 5%;
 }
  #bcit_comp1950 {
  padding: 4%;
- }
+ }*/
   #home_header {
   font-size: 44px;
   font-family: monospace;
@@ -34,7 +34,31 @@
  text-shadow: 8px 8px 5px rgba(150, 150, 150, 1);     
       
   }
- .course_desc {
+ p , h6, p >ul  {
+ 	color: grey;
+    margin-top:1%;
+    margin-bottom: 2%;
+    font-size: 1.25em;
+  line-height: 125%;
+ } 
+ 
+  h6 > a , p > a{
+ 	color: lightblue;
+ }
+
+  h6 > a:hover , p > a:hover{
+ 	color: blue;
+ }
+ ul.a {
+    list-style-type: circle;
+    color: grey;
+    margin-top:1%;
+    margin-bottom: 2%;
+    font-size: 1.25em;
+  line-height: 125%;
+}
+
+/* .course_desc {
  background-color: gray;
  border-color: red;
  color: white;
@@ -43,18 +67,18 @@
  margin-top: 8%;
  font-size: 20px;
      padding: 1%;
- }  
- .textofdesc {
+ }  */
+/* .textofdesc {
   background-color: mintcream;
   
- color: black;
+
  
  border-style: solid;
  margin-top: 0%;
  font-size: 15px;
      padding: 4%;
       box-shadow: 10px 10px 5px #888888;
- }    
+ }  */  
     
 </style>    
     
@@ -80,38 +104,51 @@
 		</section>
 	
         
-         <section class="description">
-           <div id="bcit_comp1950">     
-            This website is for BCIT students of the 12 week version of COMP 1950.
+         <section>
+           <div>     
+       <h6>     This website is for BCIT students of the 12 week version of COMP 1950.
 
-          Check the course catalogue at BCIT to see when this course is running next.
+          Check the <a href=""> course catalogue at BCIT </a> to see when this course is running next.
+           </h6>
              </div>
         </section>
         
-		<section class = "course_desc">
-			Course Description
+		<section >
+		 <h3>	Course Description </h3>
 		</section>
-       <section class = "textofdesc">
-			COMP 1950 follows on from COMP 1850 in more depth and introduces new topics and techniques for developing effective web sites.
+       <section>
+	<p>	<span id= "name_"> COMP 1950  </span> follows on from <a href=""> COMP 1850 </a>  in more depth and introduces new topics and techniques for developing effective web sites.
 
 Students will gain a deeper understanding of HTML and CSS. Topics will include: Current and emerging trends in HTML, detailed use of CSS for layout and presentation, an introduction to JavaScript frameworks such as jQuery, how to leverage Server Side Includes (SSI) for re-usable code, and working with Content Management Systems.
+ </p>
 
+ <h4> Course Goals </h4>
+  	<p>
+ 		<ul class="a">
+ 		  <li>To gain a deeper understanding of HTML, CSS and advanced topics in web development.</li>
+ 		  <li>To focus on best practices in web page and web site design.</li>
+ 		</ul>
+ 	</p>
+
+ <h4> Course learning outcomes / competencies </h4>
+  <p> Upon successful completion of this course, the student will be able to: </p>
+	 <p>
+	 <ul class="a">
+   	     <li>Deploy HTML5 and CSS3 effectively for new, old, and future web browsers. </li>
+ 	     <li>Understand and apply concepts for Search Engine Optimized content (SEO). </li>
+ 	     <li>Employ Web Standards when building web sites for maximum compatibility. </li>
+ 	     <li> Create dynamic content using JavaScript frameworks like jQuery.</li>
+ 	     <li> Implement Server Side techniques for efficient web development.</li>
+ 	     <li>Understand basic development methodology. </li>
+ 	 </ul>
+ 	</p>
 
 		</section>
     
-    	<section class = "course_desc">
-			More Course Description
-		</section>
-       <section class = "textofdesc">
-			COMP 1950 follows on from COMP 1850 in more depth and introduces new topics and techniques for developing effective web sites.
-
-Students will gain a deeper understanding of HTML and CSS. Topics will include: Current and emerging trends in HTML, detailed use of CSS for layout and presentation, an introduction to JavaScript frameworks such as jQuery, how to leverage Server Side Includes (SSI) for re-usable code, and working with Content Management Systems.
-
-
-		</section>
     
-     <section class = "course_desc">
-			JavaScript 
+    
+     <section >
+	<h2>		JavaScript </h2>
 		</section>
        
         <pre><code data-language="javascript">
@@ -200,6 +237,8 @@ Students will gain a deeper understanding of HTML and CSS. Topics will include: 
 		    }).init();
 
 		}());
+
+ $("#name_").css("font-weight","bold");		
 	</script>
 </body>
 
