@@ -27,23 +27,31 @@ $($floatingButton).click(function() {
 	$body.css('overflow', 'hidden');
 });
 
-(function() {
-    var header = document.querySelector("#nav");
-    if(window.location.hash) {
-      header.classList.add("slide--up");
+$('a').click(function(e)
+{
+    // Special stuff to do when this link is clicked...
+
+    // Cancel the default action
+    e.preventDefault();
+});
+
+$(document).ready(function(){
+  $('a[href*=#]').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    && location.hostname == this.hostname) {
+      var $target = $(this.hash);
+      $target = $target.length && $target
+      || $('[name=' + this.hash.slice(1) +']');
+      if ($target.length) {
+              $navLectures.removeClass('nav-open');
+              $navExercises.removeClass('nav-open');
+             $body.css('overflow', 'auto');
+
+        var targetOffset = $target.offset().top;
+        $('html,body')
+        .animate({scrollTop: targetOffset}, 1000);
+       return false;
+      }
     }
-
-    new Headroom(header, {
-        tolerance: {
-          down : 10,
-          up : 20
-        },
-        offset : 205,
-        classes: {
-          initial: "slide",
-          pinned: "slide--reset",
-          unpinned: "slide--up"
-        }
-    }).init();
-
-}());
+  });
+});

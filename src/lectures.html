@@ -361,14 +361,24 @@ var _ = self.Prism = {
 			<p>Although jQuery is itself written in javascript, it provides for several new features and techniques not available in 'vanilla' javascript.
 			<br><br>
 			<h4>Assigning Events</h4>
-			<p>In javascript you would assign events to trigger functions by using the event attribute, <br>eg:
-			<code>&lt;div onclick="alert('Hello World');">&lt;/div></code>
-			<br>In jQuery, events are not assigned in the HTML, but in the javascript code using a more object-oriented syntax (described below).</p>
+			<p>In javascript you would assign events to trigger functions by using the event attribute </p><br>
+			<pre class = "language-javascript"><code>&lt;div onclick="alert('Hello World');">&lt;/div></code></pre>
+			<br><p>In jQuery, events are not assigned in the HTML, but in the javascript code using a more object-oriented syntax (described below).</p>	<br><br>
+			<h4>Variables</h4>
+			<p>jQuery supports the use of an alternative syntax for variables. Instead of requiring the var keyword at definition, you can use a PHP style $ syntax.</p>		
+			<pre class = "language-javascript"><code>//standard javascript variables
+var name01  = "Shania";
+var age01	= 34;
+document.write("Hello " + name01 ", you are " + age01 + " years old.");
+
+//jQuery style variables
+$name02   = "Jane";
+$age02	= 29;
+document.write("Hello " + $name02 ", you are " + $age02 + " years old.");</code></pre>
 		</section>
 	</main>
 
 	<!-- Full screen overlay navigation -->
-
 	<section class = "nav-lectures nav-overlay nav-overlay-transition">
 		<button type ="button" class = "nav-overlay-trigger-close"></button>
 
@@ -419,7 +429,7 @@ var _ = self.Prism = {
 					<section class = "row-100">
 						<section class = "nav-overlay-right-column">
 							<ul>
-								<li><a href = "#" id = "lec7-ex-1">01 | RUN A SIMPLE SCRIPT</a></li>
+								<li><a href = "#exercise-1">01 | RUN A SIMPLE SCRIPT</a></li>
 								<li><a href = "#">02 | CLICK EVENTS</a></li>
 								<li><a href = "#">03 | JQUERY EXAMPLES</a></li>
 								<li><a href = "#">04 | DOCUMENT READY</a></li>
@@ -438,6 +448,8 @@ var _ = self.Prism = {
 	<script src = "js/main.js"></script>
 	<script src = "../lib/js/prism.js"></script>
 	<script src = "../lib/js/headroom.js"></script>
+
+	<!-- For nav hide/show when scrolling -->
 	<script>
 		(function() {
 		    var header = document.querySelector("#nav");
