@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head lang="en">
     <meta charset="UTF-8">
     <title>COMP1950 | Course Information</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/lecture.css">
+    <link rel="stylesheet" type="text/css" href="css/about.css">
 
     <link rel="stylesheet" type="text/css" href="../lib/css/prism.css">
     <link rel="stylesheet" type="text/css" href="../lib/css/animate.css">
@@ -17,9 +17,7 @@
 </head>
 
 <body>
-    <section class = "floating-nav">
-        <a href = "#" class = "button"></a>
-    </section>
+    <a id="top"></a>
     <nav id = "nav">
         <ul class = "home-logo">
             <li><a href="#"><span class="dinpro-regular">bcit</span>comp</a></li>
@@ -27,27 +25,28 @@
         <ul class = "nav-content">
             <li><a href = "#">quizzes</a></li>
             <li class = "nav-overlay-trigger"><a href = "#">lectures</a></li>
+            <li><a href="about.html">About</a></li>
         </ul>
     </nav>
 
     <main>
-        <section class="lecture-header-text">
+        <section class="about-header-text">
             <h1>Course Information</h1>
         </section>
-        <section class="lecture-header-text-mini-title firstChildPadding">
+        <section class="about-header-text-mini-title firstChildPadding">
             <h3>Place & Time</h3>
         </section>
-        <section class="lecture-text-body">
+        <section class="about-text-body">
             <p>See <a href="http://www.bcit.ca/study/courses/comp1950">BCIT's COMP 1950 page</a> for the current course room and any applicable holiday schedules.</p>
         </section>
-        <section class="lecture-header-text-mini-title">
+        <section class="about-header-text-mini-title">
             <h3>Format</h3>
         </section>
-        <section class="lecture-text-body">
+        <section class="about-text-body">
             <p>Attendance is mandatory for all sessions of COMP 1950.</p>
             <br>
-            <table class="lecture-table">
-                <tr class="lecture-table-header">
+            <table class="about-table">
+                <tr class="about-table-header">
                     <td>6:00pm - 8:30pm</td>
                     <td>8:30pm - 9:00pm</td>
                 </tr>
@@ -70,12 +69,12 @@
                 </tr>
             </table>
         </section>
-        <section class="lecture-header-text-mini-title">
+        <section class="about-header-text-mini-title">
             <h3>Evaluation</h3>
         </section>
-        <section class="lecture-text-body">
-            <table class="lecture-table">
-                <tr class="lecture-table-header">
+        <section class="about-text-body">
+            <table class="about-table">
+                <tr class="about-table-header">
                     <td>Description</td>
                     <td>Due</td>
                     <td>Worth</td>
@@ -102,161 +101,193 @@
                 </tr>
             </table>
         </section>
-        <section class="lecture-header-text-mini-title">
+        <section class="about-header-text-mini-title">
             <h3>Requirements</h3>
         </section>
-        <section class="lecture-text-body">
+        <section class="about-text-body">
+            <p>Completion of <a href="http://www.bcit.ca/study/courses/comp1850">COMP1850</a> or equivalent is required before beginning COMP1950.</p>
+            <br>
+            <p>Students taking COMP1950 must have solid foundational skills with both HTML and CSS, and some familiarity with Javascript.</p>
+            <br>
+            <p>Students are expected to understand the use of FTP and basic file management, be fluent with their operating system, and be proficient with a file compression utility (.zip).</p>
+            <br>
+            <p>If you have a problem with code you are working on and wish to email your instructor for assistance, be sure to provide the following:</p>
+            <ul>
+                <li>a .zip or .rar compressed file as an attachment. include in it all related files and folders (HTML, CSS, and Javascript, images, etc)</li>
+                <li>in the body of the email describe your question(s) as specifically as possible</li>
+            </ul>
+        </section>
+
+        <section class="about-header-text-mini-title">
+            <h3>Course Curriculum Overview</h3>
+        </section>
+        <section class="about-text-body">
             <ol>
-                <li>Completion of COMP1850 or equivalent is required before beginning COMP1950.</li>
-                <li>Students taking COMP1950 must have solid foundational skills with both HTML and CSS, and some familiarity with Javascript.</li>
-                <li>Students are expected to understand the use of FTP and basic file management, be fluent with their operating system, and be proficient with a file compression utility (.zip).</li>
-
-            </ol>
-                    <td></td>
-                    <td>
-                        If you have a problem with code you are working on and wish to email your instructor for assistance, be
-                        sure to provide the following:
+                <li>
+                    <h4>Tools & standards</h4>
+                    <div>
                         <ul>
-                            <li>a .zip or .rar compressed file as an attachment. include in it all related files and folders
-                                (HTML, CSS, and Javascript, images, etc)</li>
-                            <li>in the body of the email describe your question(s) as specifically as possible</li>
+                            <li>Development environments</li>
+                            <li>Standards</li>
+                            <li>Semantics</li>
+                            <li>Site structure</li>
+                            <li>Homework #1 assigned</li>
                         </ul>
-                    </td>
-                </tr>
-            </table>
-
-
-
-
-
-
-
-    <section>
-        <h3>Course Curriculum Overview</h3>
-        <ul>
-            <li>
-                <h3>Tools & standards</h3>
-                <ur>
-                    <li>Development environments</li>
-                    <li>Standards</li>
-                    <li>Semantics</li>
-                    <li>Site structure</li>
-                    <li>Homework #1 assigned</li>
-                </ur>
-            </li>
-            <li>
-                <h3>Markup languages</h3>
-                <li>Quiz #1 - practical, open book</li>
-                <li>HTML</li>
-                <li>XHTML</li>
-                <li>HTML5</li>
-                <li>CSS review</li>
-                <li>Homework #2 assigned</li>
-            </li>
-            <li>
-                <h3>CSS techniques</h3>
-                <li>Quiz #2 - written, closed book</li>
-                <li>Alternate stylesheets</li>
-                <li>Importing</li>
-                <li>Advanced selectors</li>
-                <li>Link specificity</li>
-                <li>Homework #3 assigned (completed with a partner)</li>
-            </li>
-            <li>
-                <h3>CSS techniques & layouts</h3>
-                <li>Quiz #3 - practical, open book</li>
-                <li>Sprites</li>
-                <li>CSS resets</li>
-                <li>Positioning behaviors</li>
-                <li>Layout strategies</li>
-                <li>Homework #4 assianged</li>
-            </li>
-            <li>
-                <h3>Responsive design</h3>
-                <li>Quiz #4 - Practical, open book</li>
-                <li>Styling for print</li>
-                <li>Media queries</li>
-                <li>Homework #5 assigned (worth twice as much as other homeworks)</li>
-            </li>
-            <li>
-                <h3>CSS3</h3>
-                <li>Quiz #5 - written, closed book</li>
-                <li>Vendor prefixing</li>
-                <li>Graceful degrading</li>
-                <li>New properties</li>
-                <li>Transitions</li>
-            </li>
-            <li>
-                <h3>Javascript frameworks</h3>
-                <li>jQuery</li>
-                <li>Homework #6 assigned</li>
-            </li>
-            <li>
-                <h3>Dynamic content</h3>
-                <li>Quiz #6 - practical, open book</li>
-                <li>http server setup, structure</li>
-                <li>Tokens, server side includes</li>
-                <li>Server management techniques</li>
-                <li>Homework #7 assigned</li>
-            </li>
-            <li>
-                <h3>Template development</h3>
-                <li>Quiz #7 - written, closed book</li>
-                <li>Templating fundamentals</li>
-                <li>SEO strategies</li>
-                <li>Homework #8 assigned</li>
-            </li>
-            <li>
-                <h3>Methodology</h3>
-                <li>Quiz #8 - written, closed book</li>
-                <li>Web development cycle</li>
-                <li>Client questionaires</li>
-                <li>Collaborative frameworks</li>
-                <li>Homework #9 assigned</li>
-                <li>Group project assigned</li>
-            </li>
-            <li>
-                <h3>Group project work</h3>
-            </li>
-            <li>
-                <h3>Final exam</h3>
-                <li>Written, open book</li>
-                <li>Practical, open book</li>
-            </li>
-        </ul>
-    </section>
-    <section>
-        <h3>Texts</h3>
-        <p>There is no official textbook for comp1950, but if you wish to supplement the online course notes and
-            examples you may find the following optional texts useful:</p>
-
-    </section>
-    <section>
-        <h3>Course Policies</h3>
-        <p>All students must understand and comply with the BCIT
-            <a href="http://www.bcit.ca/files/cas/computingparttime/pdf/computingparttime_student_guide.pdf">Student Guide</a>.</p>
-        <ul>
-            <li>Assignments: Late assignments will not be accepted for marking. Assignments must be done on an individual basis.</li>
-            <li>Attendance: The attendance policy as outlined in the current BCIT calendar will be enforced.</li>
-            <li>Course Outline Changes: The material specified in the course outline may be changed by the instructor. If changes are required, they will be announced in class.</li>
-            <li>Ethics: BCIT assumes that all students attending the Institute will follow a high standard of ethics. Incidents of cheating or plagiarism may, therefore, result in a grade of zero for the assignment, quiz, test, exam or project for all parties involved and/or expulsion from the course.</li>
-            <li>Illness: A doctor's note is required for any illness causing you to miss assignments quizzes, tests, projects or exams. At the discretion of the instructor, you may complete the work missed or have the work prorated (i.e., an average is given according to your performance throughout the course).</li>
-            <li>Makeup Tests, Exams or Quizzes: There will be no makeup tests, exams or quizzes. If you miss a test exam or quiz, you will receive zero marks. Exceptions may be made for documented medical reasons or extenuating circumstances.</li>
-        </ul>
-    </section>
-    <section>
-        <h3>Administrivia</h3>
-        <p>If you haven't already, be sure to check out myBCIT and access your free email and calendaring applications. If you're a student and BCIT, your myBCIT account should already be set up.
-        </p>
-        <p>Also, be sure to read up on the following relevant policies:</p>
-        <ul>
-            <li><a href="http://www.bcit.ca/files/pdf/policies/5002.pdf">5002 BCIT Student Regulations Policy</a> (PDF - 816 KB)</li>
-            <li><a href="http://www.bcit.ca/files/pdf/policies/3501.pdf">3501 Responsible Use of Information Technology at BCIT</a> (PDF - 137 KB)</li>
-        </ul>
-        <p>By attending this course, every student acknowledges that they have been made aware of these policies and the actions that will be taken if students fail to comply.
-        </p>
-    </section>
-
+                    </div>
+                </li>
+                <li>
+                    <h4>Markup languages</h4>
+                    <div>
+                        <ul>
+                            <li>Quiz #1 - practical, open book</li>
+                            <li>HTML</li>
+                            <li>XHTML</li>
+                            <li>HTML5</li>
+                            <li>CSS review</li>
+                            <li>Homework #2 assigned</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <h4>CSS techniques</h4>
+                    <div>
+                        <ul>
+                            <li>Quiz #2 - written, closed book</li>
+                            <li>Alternate stylesheets</li>
+                            <li>Importing</li>
+                            <li>Advanced selectors</li>
+                            <li>Link specificity</li>
+                            <li>Homework #3 assigned (completed with a partner)</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <h4>CSS techniques & layouts</h4>
+                    <div>
+                        <ul>
+                            <li>Quiz #3 - practical, open book</li>
+                            <li>Sprites</li>
+                            <li>CSS resets</li>
+                            <li>Positioning behaviors</li>
+                            <li>Layout strategies</li>
+                            <li>Homework #4 assianged</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <h4>Responsive design</h4>
+                    <div>
+                        <ul>
+                            <li>Quiz #4 - Practical, open book</li>
+                            <li>Styling for print</li>
+                            <li>Media queries</li>
+                            <li>Homework #5 assigned (worth twice as much as other homeworks)</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <h4>CSS3</h4>
+                    <div>
+                        <ul>
+                            <li>Quiz #5 - written, closed book</li>
+                            <li>Vendor prefixing</li>
+                            <li>Graceful degrading</li>
+                            <li>New properties</li>
+                            <li>Transitions</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <h4>Javascript frameworks</h4>
+                    <div>
+                        <ul>
+                            <li>jQuery</li>
+                            <li>Homework #6 assigned</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <h4>Dynamic content</h4>
+                    <div>
+                        <ul>
+                            <li>Quiz #6 - practical, open book</li>
+                            <li>http server setup, structure</li>
+                            <li>Tokens, server side includes</li>
+                            <li>Server management techniques</li>
+                            <li>Homework #7 assigned</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <h4>Template development</h4>
+                    <div>
+                        <ul>
+                            <li>Quiz #7 - written, closed book</li>
+                            <li>Templating fundamentals</li>
+                            <li>SEO strategies</li>
+                            <li>Homework #8 assigned</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <h4>Methodology</h4>
+                    <div>
+                        <ul>
+                            <li>Quiz #8 - written, closed book</li>
+                            <li>Web development cycle</li>
+                            <li>Client questionaires</li>
+                            <li>Collaborative frameworks</li>
+                            <li>Homework #9 assigned</li>
+                            <li>Group project assigned</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <h4>Group project work</h4>
+                </li>
+                <li>
+                    <h4>Final exam</h4>
+                    <div>
+                        <ul>
+                            <li>Written, open book</li>
+                            <li>Practical, open book</li>
+                        </ul>
+                    </div>
+                </li>
+            </ol>
+        </section>
+        <section class="about-header-text-mini-title">
+            <h3>Course Policies</h3>
+        </section>
+        <section class="about-text-body">
+            <p>All students must understand and comply with the BCIT <a href="http://www.bcit.ca/files/cas/computingparttime/pdf/computingparttime_student_guide.pdf">Student Guide</a>.</p>
+            <br>
+            <p><span style="font-weight:bold;">Assignments:</span> Late assignments will not be accepted for marking. Assignments must be done on an individual basis.</p>
+            <br>
+            <p><span style="font-weight:bold;">Attendance:</span> The attendance policy as outlined in the current BCIT calendar will be enforced.</p>
+            <br>
+            <p><span style="font-weight:bold;">Course Outline Changes:</span> The material specified in the course outline may be changed by the instructor. If changes are required, they will be announced in class.</p>
+            <br>
+            <p><span style="font-weight:bold;">Ethics:</span> BCIT assumes that all students attending the Institute will follow a high standard of ethics. Incidents of cheating or plagiarism may, therefore, result in a grade of zero for the assignment, quiz, test, exam or project for all parties involved and/or expulsion from the course.</p>
+            <br>
+            <p><span style="font-weight:bold;">Illness:</span> A doctor's note is required for any illness causing you to miss assignments quizzes, tests, projects or exams. At the discretion of the instructor, you may complete the work missed or have the work prorated (i.e., an average is given according to your performance throughout the course).</p>
+            <br>
+            <p><span style="font-weight:bold;">Makeup Tests, Exams or Quizzes:</span> There will be no makeup tests, exams or quizzes. If you miss a test exam or quiz, you will receive zero marks. Exceptions may be made for documented medical reasons or extenuating circumstances.</p>
+        </section>
+        <section class="about-header-text-mini-title">
+            <h3>Administrivia</h3>
+        </section>
+        <section class="about-text-body">
+            <p>If you haven't already, be sure to <a href="http://my.bcit.ca">check out myBCIT</a> and access your free email and calendaring applications. If you're a student and BCIT, your myBCIT account should already be set up.</p>
+            <br>
+            <p>Also, be sure to read up on the following relevant policies:</p>
+            <ul>
+                <li><a href="http://www.bcit.ca/files/pdf/policies/5002.pdf">5002 BCIT Student Regulations Policy</a> (PDF - 816 KB)</li>
+                <li><a href="http://www.bcit.ca/files/pdf/policies/3501.pdf">3501 Responsible Use of Information Technology at BCIT</a> (PDF - 137 KB)</li>
+            </ul>
+            <br>
+            <p>By attending this course, every student acknowledges that they have been made aware of these policies and the actions that will be taken if students fail to comply.</p>
+        </section>
     </main>
 </body>
 </html>

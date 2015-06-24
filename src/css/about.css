@@ -14,6 +14,18 @@ th, td {
     text-align: left;
 }
 
+li {
+    padding: 5px;
+}
+
+ol li {
+    list-style-type: decimal;
+}
+
+ul li {
+    list-style-type: disc;
+}
+
 .about-header-text {
     position: relative;
     padding-top: 13%;
