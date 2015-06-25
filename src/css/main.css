@@ -188,6 +188,7 @@ button.nav-overlay-trigger-close {
 	position: absolute;
 	width: 50%;
 }
+
 .nav-overlay-left-column h1 {
 	font-family: DINProBlack;
 	font-size: 5em;
@@ -200,7 +201,7 @@ h1.big-number {
 }
 
 .nav-overlay-right-column {
-	width: 40%;
+	width: 50%;
 	padding-top: 15%;
 	float: right;
 	position: relative;
@@ -341,4 +342,15 @@ button.flat-buttons:hover {
 
 button:focus {
   outline: none
+}
+
+
+@media (min-width: 801px) and (max-width: 1199px) {
+	.nav-overlay-left-column {
+		display: none;
+	}
+
+	.nav-overlay-right-column {
+		width: 100%;
+	}
 }
