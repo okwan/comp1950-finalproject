@@ -26,6 +26,10 @@ ul li {
     list-style-type: disc;
 }
 
+textarea {
+    margin: 10px;
+}
+
 .quiz-header-text {
     position: relative;
     padding-top: 13%;
