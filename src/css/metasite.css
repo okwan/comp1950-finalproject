@@ -140,7 +140,8 @@ h3 {
 .col-50 {
 	position: relative;
 	float: left;
-	width: 50%;
+	width: 45%;
+	padding-right: 5%;
 }
 
 .col-50 p {
@@ -154,17 +155,148 @@ h3 {
 	width: 100%;
 	height: 100%;
 	vertical-align: middle;
+	margin-top: 13%;
 }
 .align-left-2 {
 	text-align: left;
 }
 
 .line-seperator {
-	padding-top: 1%;
+	padding-top: 5%;
 	border-bottom: 2px solid #ef4135;
 	width: 40%;
 }
 
 .padding-top-20 {
 	padding-top: 10%;
+}
+
+.nav-button {
+	position: absolute;
+	top: 3%;
+	left: 2%;
+}
+
+.nav-button img {
+	width: 70%;
+	height: 70%;
+	cursor: pointer;
+}
+
+
+.nav-index {
+	position: fixed;
+	opacity: 0;
+	visibility: hidden;
+	top: 0;
+	left: 0;
+	background-color: rgba(64,64,64,0.95);
+	z-index: 2000;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+
+.nav-overlay-container {
+	position: relative;
+	width: 1200px;
+	margin-left: 15%;
+	z-index: 1000;
+}
+
+.nav-overlay-fixed {
+	position: fixed;
+	width: 100%;
+	top: 270px;
+	left: 0px;
+	height: 0px;
+	z-index: 2000;
+}
+
+.nav-overlay-left-column {
+	position: absolute;
+	width: 50%;
+}
+.nav-overlay-left-column h1 {
+	font-family: DINProBlack;
+	font-size: 5em;
+	text-transform: uppercase;
+	color: white;
+}
+
+h1.big-number {
+	font-size: 18em;
+}
+
+.nav-overlay-right-column {
+	width: 100%;
+	padding-top: 15%;
+	float: right;
+	position: relative;
+	overflow: auto;
+	z-index: 2000;
+}
+
+.nav-overlay-right-column ul {
+	font-size: 5em;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-family: 'Raleway', sans-serif;
+	z-index: 2000;
+}
+
+.nav-overlay-right-column a {
+	text-decoration: none;
+	color: white;
+}
+
+.nav-overlay-right-column ul li {
+	display: block;
+	padding: 25px;
+}
+
+.nav-overlay-right-column ul li a:hover {
+	transition: 0.1s ease-in;
+	color: #ef4135;
+}
+
+.row-100 {
+	height: 100%;
+}
+
+
+section.nav-open {
+	opacity: 1;
+	visibility: visible;
+	-webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+
+/* nav overlay */
+.nav-overlay {
+	position: fixed;
+	opacity: 0;
+	visibility: hidden;
+	top: 0;
+	left: 0;
+	background-color: rgba(64,64,64,0.95);
+	z-index: 2000;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+
+}
+
+/* nav close button */
+button.nav-overlay-trigger-close {
+	position: fixed;
+	right: 20px;
+	top: 20px;
+	width: 80px;
+	height: 80px;
+	background: url(../resources/x-button.svg) no-repeat center center;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	z-index: 2000;
 }

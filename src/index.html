@@ -8,7 +8,9 @@
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/metasite.css">
 
-<link href='http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="../lib/css/prism.css">
+	<link rel="stylesheet" type="text/css" href="../lib/css/animate.css">
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,300' rel='stylesheet' type='text/css'>
 
 	<!-- JS -->
 	<script src = "../lib/js/jquery-1.11.3.min.js"></script>
@@ -18,6 +20,9 @@
 
 <body>
 	<main>
+		<section class = "nav-button">
+			<img src = "./resources/nav-button.png" class = "nav-index-trigger"/>
+		</section>
 		<section class = "header-bg">
 			<div class = "header-overlay">
 				<div class = "extra-container">
@@ -32,7 +37,7 @@
 				</div>
 			</div>
 		</section>
-		<section class = "who-we-are">
+		<section class = "who-we-are" id = "yeah-us">
 			<div class = "container">
 				<h1 class = "raleway-h1 padding-fix">Our Team.</h1>
 					<ul class = "ul-flex">
@@ -59,14 +64,40 @@
 				<div class = "col-50">
 					<h1 class = "raleway-h1 align-left-2">Our Project</h1>
 					<div class = "line-seperator"></div>
-					<p class = "align-left-2">The original website had it's strengths and weaknesses. We revamped it in a way so the site still delievered it's main purpose, which was to provide instruction on web development techniques and best practices.</p><br><p class = "align-left-2">In order to provide a paperless approach, we also added a quiz page so students can view and do their quizzes online. For the ease of students accessing exercises, we implemented a new feature so it is easier to navigate between each exe...(line truncated)...
+					<p class = "align-left-2">The original website had it's strengths and weaknesses. We revamped it in a way so the site still delievered it's main purpose, which was to provide instruction on web development techniques and best practices.</p><br><p class = "align-left-2">In order to provide a paperless approach, we also added a quiz page so students can view and do their quizzes online. For the ease of students accessing exercises, we implemented a new feature so it is easier to navigate between each exercise.
 				</div>
 				<div class = "col-50 right-float">
-					<img src = "./resources/laptop-mockup2.png" class = "center-margin-auto"/>
+					<img src = "./resources/mockup-3.png" class = "center-margin-auto"/>
 				</div>
 			</div>
 		</section>
+		<section class = "project-pictures">
+		</section>
 	</main>
+
+	<!-- Full screen overlay navigation -->
+	<section class = "nav-index nav-overlay nav-overlay-transition">
+		<button type ="button" class = "nav-overlay-trigger-close"></button>
+
+		<section class = "nav-content">
+				<section class = "nav-overlay-container">
+					<section class = "row-100">
+						<section class = "nav-overlay-right-column">
+							<ul>
+								<li><a class = "scroll-and-overlay-close" href = "#yeah-us">INTRODUCTION</a></li>
+								<li><a href = "home.html">PROTO-SITE</a></li>
+								<li><a href = "#">SITEMAP</a></li>
+								<li><a href = "rational.html">RATIONALE</a></li>
+								<br><br><br><br><br><br>
+							</ul>
+						</section>
+					</section>
+				</section>
+		</section>
+	</section>
+
+	<script src = "js/main.js"></script>
+	<script src = "../lib/js/headroom.js"></script>
 </body>
 
 </html>
