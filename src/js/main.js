@@ -1,6 +1,7 @@
 
 // global variables
 $navOverlayTrigger = $(".nav-overlay-trigger");
+$navOverlayTriggerQuiz = $(".nav-overlay-trigger-quiz");
 $navOverlay = $(".nav-overlay");
 $navOverlayTriggerClose = $(".nav-overlay-trigger-close");
 $body = $("body");
@@ -8,6 +9,7 @@ $floatingButton = $(".button");
 
 $navLectures = $(".nav-lectures");
 $navExercises = $(".nav-exercises");
+$navQuiz = $(".nav-quizzes");
 
 // navigation toggle add & remove
 $($navOverlayTrigger).click(function() {
@@ -16,9 +18,16 @@ $($navOverlayTrigger).click(function() {
 	$body.css('overflow', 'hidden');
 });
 
+$($navOverlayTriggerQuiz).click(function() {
+  $navQuiz.addClass('nav-open');
+  $navQuiz.addClass('.bounceOutUp');
+  $body.css('overflow', 'hidden');
+});
+
 $($navOverlayTriggerClose).click(function() {
 	$navLectures.removeClass('nav-open');
 	$navExercises.removeClass('nav-open');
+  $navQuiz.removeClass('nav-open');
 	$body.css('overflow', 'auto');
 });
 

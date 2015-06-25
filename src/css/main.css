@@ -279,7 +279,7 @@ pre[class*="language-"] {
 	overflow: auto;
 }
 
-.nav-lectures {
+.nav-lectures, .nav-exercises, .nav-quizzes {
 	position: fixed;
 	opacity: 0;
 	visibility: hidden;
@@ -292,18 +292,6 @@ pre[class*="language-"] {
 	overflow: auto;
 }
 
-.nav-exercises {
-	position: fixed;
-	opacity: 0;
-	visibility: hidden;
-	top: 0;
-	left: 0;
-	background-color: rgba(64,64,64,0.95);
-	z-index: 2000;
-	width: 100%;
-	height: 100%;
-	overflow: auto;
-}
 ol {
 	margin-left: 1.5%;
 }

@@ -19,11 +19,7 @@
 <style>
 
   #home_header {
-/*  font-size: 44px;
- */
-  margin-bottom: 3%;
- text-shadow: 3px 3px 1px rgba(150, 150, 150, 1);     
-      
+  margin-bottom: 3%;      
   }
  p , h6, p >ul  {
  	color: grey;
@@ -31,17 +27,14 @@
     margin-bottom: 2%;
     font-size: 1.25em;
   line-height: 125%;
-  font-family: Dinpro-regular;
+  font-family: DINProRegular;
  } 
  
   h6 > a , p > a{
  	color: #8A2E2E;
  	  font-weight: bold;
  }
-
- /* h6 > a:hover , p > a:hover{
- 	color: blue;
- }*/
+ 
  ul.a {
     list-style-type: circle;
     color: grey;
@@ -62,8 +55,8 @@
 		</ul>
 		
 		<ul class = "nav-content">
-			<li><a href = "#">quizzes</a></li>
-			<li class = "nav-overlay-trigger"><a href = "#">lectures</a></li>
+			<li class = "nav-overlay-trigger-quiz"><a href = "javascript:void(0)">quizzes</a></li>
+			<li class = "nav-overlay-trigger"><a href = "javascript:void(0)">lectures</a></li>
             <li><a href="about.html">about</a></li>
         </ul>
 	</nav>
@@ -71,7 +64,7 @@
        
         
 		<section class = "lecture-header-text">
-            <div id = "home_header"> <h1> Home </h1></div></h2>
+            <div id = "home_header"><h1>Home</h1></div></h2>
 		</section>
 	
         
@@ -174,6 +167,33 @@ Students will gain a deeper understanding of HTML and CSS. Topics will include: 
 	</section>
 
 
+    <section class = "nav-quizzes nav-overlay nav-overlay-transition">
+        <button type ="button" class = "nav-overlay-trigger-close"></button>
+
+        <section class = "nav-content">
+            <section class = "nav-overlay-fixed">
+                <section class = "nav-overlay-container">
+                    <section class = "nav-overlay-left-column">
+                        <h1>quizzes</h1>
+                        <br><br>     
+                    </section>  
+                </section>
+            </section>
+                <section class = "nav-overlay-container">
+                    <section class = "row-100">
+                        <section class = "nav-overlay-right-column">
+                            <ul>
+                                <li><a class = "scroll-and-overlay-close" href = "#exercise-1">01 | RUN A SIMPLE SCRIPT</a></li>
+                                <li><a class = "scroll-and-overlay-close" href = "#exercise-2">02 | CLICK EVENTS</a></li>
+                                <li><a href = "#">03 | JQUERY EXAMPLES</a></li>
+                                <li><a href = "#">04 | DOCUMENT READY</a></li>
+                                <br><br><br><br><br><br>
+                            </ul>
+                        </section>
+                    </section>
+                </section>
+        </section>
+    </section>
 
 	<footer>
 
