@@ -28,6 +28,8 @@
         }
         p , h6, p >ul  {
             color: grey;
+                        font-family: DINProRegular;
+
             margin-top:1%;
             margin-bottom: 2%;
             font-size: 1.25em;
@@ -60,7 +62,7 @@
 		</ul>
 		
 		<ul class = "nav-content">
-			<li><a href = "#">quizzes</a></li>
+			<li class = "nav-overlay-trigger-quiz"><a href = "#">quizzes</a></li>
 			<li class = "nav-overlay-trigger"><a href = "#">lectures</a></li>
             <li><a href="about.html">about</a></li>
         </ul>
@@ -94,7 +96,7 @@
 
            <br>
 	    
-		 <h3>	Home Page </h3>
+		 <h3>Home Page</h3><br>
 		
           <ul class="a">
    	     <li>	Text-shadow to give more advance look and nice features  </li>
@@ -102,7 +104,7 @@
    	     </ul>
         <br>
 
-        <h3>Lectures</h3>
+        <h3>Lectures</h3><br>
           <ul class="a">
 		   	  <li>seperate navigation for exercises to easily find which exercise you want to redo</li>
 		      <li>build on a one-page veritical design, this was becasue when using the bcitcomp.ca site, it felt like a lot of information was thrown at you on one page.</li>
@@ -113,18 +115,14 @@
 		      <li>increase hierachy of overall design for readability and enhance user experience</li>
 		      <li>exercises are now not just hyperlinks inside the lecture page, but will be turned into buttons for better usabiliity.</li>
    	     </ul>
-		<br>
-
-         <h3>	Quizez & About  </h3>
-		
-          <ul class="a">
-   	     <li>	ggggggg  </li>
-        <li> ddddddddd  </li>
-   	     </ul>
-
-      
+   	     <br><br><br>
+   	     <h3>Layout Decisions</h3><br>
+   	     <p>The most obvious improvement we have done is the overall UI enhancements. We provided a seamless color scheme, even adding text-highlighting color. The text on the current website becomes blurry and hard to read when you stare at it for a long time because of it's tight and small font. We wanted to make sure that the user does not get overwhelmed by information but focus on what they want to look at instead.</p><br>
+   	     <p>The biggest problems on the current website is that it can get overwhelming with all the info. It was also very troublesome to scroll through to access certain links. We strongly believe in the one-page vertical design still which was similiar to the current website. But we added better functionality by incorporating smooth scrolling to different exercises on the lecture page. Also, to access the homework, all you need to do is to click the floating nav button and click on the homework button to download it.</p><br><p>Listed above are all the deliverables that we implemented. The most advanced jQuery / CSS3 functions were the full screen overlays and smooth scrolling. With the powerful library of jQuery, it was quite easy to add / remove classes to do the overlay feature of opening and closing. We did take advantage of open-source libraries available such as animate, headroom, and prism.</p><br><p>Headroom was used to implement the scrolling nav feature, so the top navigation will be hidden when the user scrolls. This helps with overall usability and only show the navigation when the user really needs it. We implemented this because we believe the content is the most important thing that the user needs to be looking for.</p>
+   	     <br><h3>Plan To Implemenate</h3><br>
+   	     <p>Some things we would like to implemenate is to personalise the website according to the user. The user would be able to log-in through a server/client interaction within the website. There the student can access grades, exercise solutions, quiz answers and so on. Therefore everything will be based off the website, and the course could have an option of becoming an online course as well.</p>
 		</section>	
-	
+		
 	</main>
 
 
@@ -149,7 +147,7 @@
 								<li><a href = "#">04 | CSS LAYOUTS</a></li>
 								<li><a href = "#">05 | RESPONSIVE CSS</a></li>
 								<li><a href = "#">06 | CSS3</a></li>
-								<li><a href = "#">07 | JS FRAMEWORKS</a></li>			
+								<li><a href = "lectures.html">07 | JS FRAMEWORKS</a></li>			
 								<li><a href = "#">08 | DYNAMIC CONTENT</a></li>
 								<li><a href = "#">09 | TEMPLATING, SEO</a></li>
 								<li><a href = "#">10 | METHODOLOGY</a></li>
@@ -161,7 +159,36 @@
 		</section>
 	</section>
 
+    <section class = "nav-quizzes nav-overlay nav-overlay-transition">
+        <button type ="button" class = "nav-overlay-trigger-close"></button>
 
+        <section class = "nav-content">
+            <section class = "nav-overlay-fixed">
+                <section class = "nav-overlay-container">
+                    <section class = "nav-overlay-left-column">
+                        <h1>Quizzes</h1>
+                        <br><br>     
+                    </section>  
+                </section>
+            </section>
+                <section class = "nav-overlay-container">
+                    <section class = "row-100">
+                        <section class = "nav-overlay-right-column">
+                            <ul>
+                                <li><a href = "#">Quiz 1</a></li>
+                                <li><a href = "#">Quiz 2</a></li>
+                                <li><a href = "#">Quiz 3</a></li>
+                                <li><a href = "#">Quiz 4</a></li>
+                                <li><a href = "#">Quiz 5</a></li>
+                                <li><a href = "#">Quiz 6</a></li>
+                                <li><a href = "#">Quiz 7</a></li>
+                                <li><a href = "quizzes.html">Quiz 8</a></li>
+                            </ul>
+                        </section>
+                    </section>
+                </section>
+        </section>
+    </section>
 
 	<footer>
 
