@@ -11,6 +11,9 @@
   min-height: 800px;
 }
 
+.extra-container {
+    padding-top: 10%;
+}
 .container {
 	text-align: center;
 	margin-right: auto;
@@ -98,6 +101,8 @@ ul.ul-flex li {
 
 ul.ul-flex li img {
 	display: block;
+	height: 70%;
+	width: 70%;
 }
 
 ul.ul-flex li p {
